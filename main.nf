@@ -72,15 +72,14 @@ workflow {
       file(row.R2))}                                                          
 
 
-  getDbKEGG(Channel
-              .fromList(['https://atenea.fisabio.san.gva.es/syb/keggdb.dmnd', 'kegg.dmnd']))  
+  getDbKEGG(Channel.from(['https://atenea.fisabio.san.gva.es/syb/keggdb.dmnd', 'kegg.dmnd']))  
   getDbEGGNOG(Channel
-              .fromList(['https://atenea.fisabio.san.gva.es/syb/eggnog.dmnd', 'eggnog.dmnd']))
+              .from(['https://atenea.fisabio.san.gva.es/syb/eggnog.dmnd', 'eggnog.dmnd']))
   getDbPFAM ( 
     Channel
-      .fromList(
-        ["https://atenea.fisabio.san.gva.es/syb/Pfam-A.hmm", "Pfam-A.hmm"],
-        ["https://atenea.fisabio.san.gva.es/syb/Pfam-A.hmm.dat", "Pfam-A.hmm.dat"]))
+      .from(
+        ['https://atenea.fisabio.san.gva.es/syb/Pfam-A.hmm', 'Pfam-A.hmm'],
+        ['https://atenea.fisabio.san.gva.es/syb/Pfam-A.hmm.dat', 'Pfam-A.hmm.dat']))
 
 
   LIMPIA(samples_channel) 
