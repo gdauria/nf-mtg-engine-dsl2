@@ -1,16 +1,16 @@
 process getDb {                                                                 
                                                                                 
-conda 'conda-forge::wget'                                                       
+conda 'conda-forge::curl'                                                       
 publishDir "${params.cacheDir}/DBs/", mode: 'copy', pattern: '*'                
                                                                                 
 input:                                                                          
-val(FILE)                                                                       
-                                                                                
+tuple val(FILE), val(FILEOUT)                                           
+                                     
 output:                                                                         
                                                                                 
 script:                                                                         
 """                                                                             
-wget --no-check-certificate ${FILE}                                             
+wget --insecure ${FILE} --output ${FILEOUT}
 """                                                                             
 }                                                                               
      
