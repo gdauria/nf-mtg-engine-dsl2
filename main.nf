@@ -77,7 +77,7 @@ workflow {
   getDbPFAM ( 
     Channel
       .fromList([
-         'https://atenea.fisabio.san.gva.es/syb/Pfam-A.hmm', 'Pfam-A.hmm'],
+         'https://atenea.fisabio.san.gva.es/syb/Pfam-A.hmm', 'Pfam-A.hmm'],[
          'https://atenea.fisabio.san.gva.es/syb/Pfam-A.hmm.dat', 'Pfam-A.hmm.dat']))
 
 
