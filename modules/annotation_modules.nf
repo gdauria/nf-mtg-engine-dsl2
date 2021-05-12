@@ -10,7 +10,7 @@ output:
                                                                                 
 script:                                                                         
 """                                                                             
-wget --insecure ${FILE} --output ${FILEOUT}
+curl --insecure ${FILE} --output ${FILEOUT}
 """                                                                             
 }                                                                               
      
