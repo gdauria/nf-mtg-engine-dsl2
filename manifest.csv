@@ -1,0 +1,4 @@
+SampleID,R1,R2
+Muestra1,original_data/muestra1_R1.fastq.gz,original_data/muestra1_R2.fastq.gz
+Muestra2,original_data/muestra2_R1.fastq.gz,original_data/muestra2_R2.fastq.gz
+Muestra3,original_data/muestra2_R1.fastq.gz,original_data/muestra2_R2.fastq.gz
