@@ -72,8 +72,10 @@ workflow {
       file(row.R2))}                                                          
 
 
-  getDbKEGG(Channel.from(["https://atenea.fisabio.san.gva.es/syb/keggdb.dmnd", "kegg.dmnd"]))  
-  getDbEGGNOG(Channel.from(["https://atenea.fisabio.san.gva.es/syb/eggnog.dmnd", "eggnog.dmnd"]))
+  getDbKEGG(Channel
+              .fromList(['https://atenea.fisabio.san.gva.es/syb/keggdb.dmnd', 'kegg.dmnd']))  
+  getDbEGGNOG(Channel
+              .fromList(['https://atenea.fisabio.san.gva.es/syb/eggnog.dmnd', 'eggnog.dmnd']))
   getDbPFAM ( 
     Channel
       .fromList([
