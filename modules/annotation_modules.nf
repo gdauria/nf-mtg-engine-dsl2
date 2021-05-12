@@ -1,7 +1,7 @@
 process getDb {                                                                 
                                                                                 
 conda 'conda-forge::curl'                                                       
-publishDir "${params.cacheDir}/DBs/", mode: 'copy', pattern: '${FILEOUT}'                
+publishDir "${params.cacheDir}/DBs/", mode: 'copy', pattern: '{*}'                
                                                                                 
 input:                                                                          
 tuple val(FILE), val(FILEOUT)                                           
